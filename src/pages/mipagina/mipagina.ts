@@ -37,6 +37,7 @@ export class MipaginaPage {
 
   mostrarPersona (persona): void {
     console.log("Nombre: " + persona.nombre + ", peso: " + persona.peso + ", estatura: "+ persona.estatura);
+    
   }
 
   consumirListaRespuestaPersonas (listaok : any)

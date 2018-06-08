@@ -31,9 +31,11 @@
   </p>
   
 </div>
-<div *ngFor="let unapersona of lista_personas">
-    {{unapersona.nombre}}, estatura: {{unapersona.estatura}}. Peso: {{unapersona.peso}}
-</div>
+<ul *ngFor="let unapersona of lista_personas">
+    <li (click)=mostrarPersona(unapersona)>
+        {{unapersona.nombre}}, estatura: {{unapersona.estatura}}. Peso: {{unapersona.peso}}
+    </li>
+</ul>
   <p>
     Mi Página 
   </p>
