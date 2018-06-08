@@ -6,7 +6,7 @@ export class Persona {
     constructor (nombre : string, peso : number, estatura : number)
     {
         this.nombre = nombre;
+        this.estatura = estatura;        
         this.peso = peso;
-        this.estatura = estatura;
     }
 }

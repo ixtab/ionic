@@ -1,19 +1,35 @@
 
+<ion-header>
+  <div>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My First List</ion-title>
+  </ion-navbar>
+  </div>
+</ion-header>
+
 <ion-content padding>
-<div>
+<div *ngIf="!persona_cargada">
+  <img src="assets/imgs/dvdp1.gif" alt="">
+</div>
+<div *ngIf="persona_cargada">
   <h3>{{persona.nombre}}, esta es mi Página</h3>
   <label for="peso">Peso: </label>  
   <input type="number" id="peso" [(ngModel)]="persona.peso">
+  <br>
   <label for="altura">Altura: </label>
   <input type="number" id="estatura" [(ngModel)]="persona.estatura">
   <br>
   <br>
-  <button ion-button color="secondary" round (click)="calculaIMC()">Calcula IMC</button>
+  <button ion-button color="secondary" round (click)="calculaIMC()"><ion-icon name="body"></ion-icon>--Calcula IMC--<hr><ion-icon name="body"></ion-icon></button>
   <h2>{{resultado}}</h2>
   <hr>
   <p>
     Hola {{persona.nombre}}, esta es mi página
   </p>
+</div>
   <p>
     Mi Página 
   </p>
@@ -58,5 +74,5 @@
     Non excepteur ullamco dolore magna ad sunt. 
     Deserunt ex mollit aliquip amet excepteur enim adipisicing velit sint pariatur.
   </p>
-</div>
+
 </ion-content>
