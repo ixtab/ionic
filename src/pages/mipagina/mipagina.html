@@ -29,6 +29,10 @@
   <p>
     Hola {{persona.nombre}}, esta es mi página
   </p>
+  
+</div>
+<div *ngFor="let unapersona of lista_personas">
+    {{unapersona.nombre}}, estatura: {{unapersona.estatura}}. Peso: {{unapersona.peso}}
 </div>
   <p>
     Mi Página 
